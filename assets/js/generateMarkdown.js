@@ -8,13 +8,11 @@ const {
     usage, 
     license, 
     contributing, 
-    dependencies, 
     tests, 
     github_username, 
     email_address } = data;
 
-
-    return `# readme-generator 
+   return `# readme-generator 
 ${title}   
 ${badgeForLicense(license)}
 
