@@ -5,7 +5,10 @@ import inquirer from 'inquirer';
 import fs from 'fs';
 
 // imports a default export named generateMarkdown from the './utils/generateMarkdown.js' file.
-import generateMarkdown from "./utils/generateMarkdown.js";
+import generateMarkdown from './utils/generateMarkdown.js';
+
+
+const outputFile = './assets/output/README.md';
 
 
 // Declaration of badgesArray for license details - this will be used for look up of url
@@ -153,7 +156,7 @@ function main() {
         .then(answer => {
             let markDownData = generateMarkdown(badgeForLicense, answer);
             console.log("Generating ..");
-            writeToFile('test.md', markDownData);
+            writeToFile(outputFile, markDownData);
         })
 }
 
