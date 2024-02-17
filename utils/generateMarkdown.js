@@ -1,9 +1,22 @@
 const generateMarkdown = (data) => {
+
+const { 
+    title, 
+    description, 
+    installation, 
+    usage, 
+    license, 
+    contributing, 
+    dependencies, 
+    tests, 
+    github_username, 
+    email_address } = data;
+
     return `# readme-generator 
-${data.title}   
+${title}   
 
 ## Description 
-${data.description} 
+${description} 
 
 ## Table of Contents
 
@@ -22,26 +35,27 @@ ${data.description}
 * [Questions](#questions)
 
 ## Installation
-${data.installation} 
+${installation} 
 
 ## Usage
-${data.usage} 
+${usage} 
 
 ## License
-${data.license}
+${license}
 
 ## Contributing
-${data.contributing}
+${contributing}
 
 ## Dependencies
-${data.dependencies}
+${dependencies}
 
 ## Tests
-${data.tests}
+${tests}
 
 ## Questions
-${data.github_username}
-${data.email_address}`;
+${github_username}
+${email_address}`;
 }
 
 export default generateMarkdown;
+
