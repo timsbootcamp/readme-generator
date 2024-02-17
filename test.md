@@ -1,8 +1,8 @@
 # readme-generator 
-a   
+g   
 
 ## Description 
-a 
+g 
 
 ## Table of Contents
 
@@ -21,23 +21,23 @@ a
 * [Questions](#questions)
 
 ## Installation
-a 
+g 
 
 ## Usage
-a 
+g 
 
 ## License
 MIT
 
 ## Contributing
-
+g
 
 ## Dependencies
-a
+g
 
 ## Tests
-a
+g
 
 ## Questions
-a
-a
+g
+g
