@@ -29,8 +29,6 @@ ${description}
 
 * [Contributing](#contributing)
 
-* [Dependencies](#dependencies)
-
 * [Tests](#tests)
 
 * [Questions](#questions)
