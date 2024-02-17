@@ -70,7 +70,7 @@ https://youtu.be/DFEf9A5abh4
 Sample README.md
 https://github.com/timsbootcamp/readme-generator/blob/main/assets/output/README.md
 
-
+![screenshot](screenshot.png)
 
 
 
