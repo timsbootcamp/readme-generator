@@ -1,8 +1,9 @@
 # readme-generator 
-ABC   
+a   
+[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 
 ## Description 
-DEF 
+a 
 
 ## Table of Contents
 
@@ -21,23 +22,23 @@ DEF
 * [Questions](#questions)
 
 ## Installation
-GHI 
+a 
 
 ## Usage
-JKL 
+a 
 
 ## License
-MIT
+Apache 2.0
 
 ## Contributing
-MNO
+
 
 ## Dependencies
-PQR
+npm i
 
 ## Tests
-STU
+npm test
 
 ## Questions
-VWX
-YZ
+a
+a
