@@ -69,8 +69,15 @@ const questions = () => {
             name: 'license',
             type: 'list',
             message: 'Select the License the application is covered under?',
-            choices: ['APACHE 2.0', 'GNU GPL 3.0', 'MIT', 'BSD 2', 'BSD 3'],
-            default: ["MIT"],
+            choices: [
+                "MIT",
+                "Apache 2.0",
+                "GPLv3",
+                "BSD 3-Clause",
+                "ISC",
+                "Mozilla Public License 2.0",
+            ],
+            default: 'MIT', 
             validate: nameInput => {
                 if (nameInput) {
                     return true;
@@ -82,7 +89,7 @@ const questions = () => {
         },
     
         {
-            name: 'contributors',
+            name: 'contributing',
             type: 'input',
             message: 'Provide a list of contributors for their input in the project?'
         },
@@ -135,12 +142,14 @@ const questions = () => {
 // function to initialize program
 function main() {
     questions()
-    .then(answers => {
-        console.log(answers.github_username);
-        let markDownData = generateMarkdown();
+    .then(answer => {
+        let markDownData = generateMarkdown(answer);
         console.log(markDownData);
     })
 }
+
+
+
 
 // function call to initialize program
 main();
