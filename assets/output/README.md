@@ -1,9 +1,9 @@
 # readme-generator 
-a   
+aaa   
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
 ## Description 
-b 
+bb1 
 
 ## Table of Contents
 
@@ -22,23 +22,23 @@ b
 * [Questions](#questions)
 
 ## Installation
-c 
+npm i 
 
 ## Usage
 d 
 
 ## License
-MIT
+This repository is distributed under MIT license.
 
 ## Contributing
-e
+
 
 ## Tests
-f
+d
 
 ## Questions
 
 If you have any questions or feedback, feel free to contact me via email.
 
-- GitHub Username: g
-- Email Address: h
+- GitHub Username: d
+- Email Address: d
