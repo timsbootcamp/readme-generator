@@ -42,7 +42,7 @@ ${installation}
 ${usage} 
 
 ## License
-${license}
+This repository is distributed under ${license} license.
 
 ## Contributing
 ${contributing}
