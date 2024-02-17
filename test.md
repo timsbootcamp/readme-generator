@@ -1,9 +1,8 @@
-const generateMarkdown = (data) => {
-    return `# readme-generator 
-${data.title}   
+# readme-generator 
+a   
 
 ## Description 
-${data.description} 
+a 
 
 ## Table of Contents
 
@@ -22,26 +21,23 @@ ${data.description}
 * [Questions](#questions)
 
 ## Installation
-${data.installation} 
+a 
 
 ## Usage
-${data.usage} 
+a 
 
 ## License
-${data.license}
+MIT
 
 ## Contributing
-${data.contributing}
+
 
 ## Dependencies
-${data.dependencies}
+a
 
 ## Tests
-${data.tests}
+a
 
 ## Questions
-${data.github_username}
-${data.email_address}`;
-}
-
-export default generateMarkdown;
+a
+a
