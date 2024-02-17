@@ -47,9 +47,6 @@ ${license}
 ## Contributing
 ${contributing}
 
-## Dependencies
-${dependencies}
-
 ## Tests
 ${tests}
 
