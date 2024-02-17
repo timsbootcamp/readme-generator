@@ -1,6 +1,8 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
 
+import generateMarkdown from "./utils/generateMarkdown";
+
 console.log("Hello");
 
 // array of questions for user
