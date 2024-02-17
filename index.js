@@ -2,7 +2,6 @@ import inquirer from 'inquirer';
 import fs from 'fs';
 import generateMarkdown from "./utils/generateMarkdown.js";
 
-console.log("Hello");
 
 // array of questions for user
 const questions = () => {
@@ -142,6 +141,7 @@ const questions = () => {
 // function to write README file
 function writeToFile(fileName, data) {
 
+    // Output file
     fs.writeFile(fileName, data, err => {
     
     // log any errors
@@ -154,7 +154,7 @@ function writeToFile(fileName, data) {
 }
 
 
-// function to initialize program
+// entry function that will be called first. See below call.
 function main() {
     questions()
     .then(answer => {
@@ -167,5 +167,5 @@ function main() {
 
 
 
-// function call to initialize program
+// entry function call.
 main();
