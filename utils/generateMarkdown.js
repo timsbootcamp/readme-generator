@@ -14,49 +14,49 @@ const {
 
 
     return `# readme-generator 
-${title}   
-${badgeForLicense(license)}
+    ${title}   
+    ${badgeForLicense(license)}
 
-## Description 
-${description} 
+    ## Description 
+    ${description} 
 
-## Table of Contents
+    ## Table of Contents
 
-* [Installations](#installations)
+    * [Installations](#installations)
 
-* [Usage](#usage)
+    * [Usage](#usage)
 
-* [License](#license)
+    * [License](#license)
 
-* [Contributing](#contributing)
+    * [Contributing](#contributing)
 
-* [Dependencies](#dependencies)
+    * [Dependencies](#dependencies)
 
-* [Tests](#tests)
+    * [Tests](#tests)
 
-* [Questions](#questions)
+    * [Questions](#questions)
 
-## Installation
-${installation} 
+    ## Installation
+    ${installation} 
 
-## Usage
-${usage} 
+    ## Usage
+    ${usage} 
 
-## License
-${license}
+    ## License
+    ${license}
 
-## Contributing
-${contributing}
+    ## Contributing
+    ${contributing}
 
-## Dependencies
-${dependencies}
+    ## Dependencies
+    ${dependencies}
 
-## Tests
-${tests}
+    ## Tests
+    ${tests}
 
-## Questions
-${github_username}
-${email_address}`;
+    ## Questions
+    ${github_username}
+    ${email_address}`;
 }
 
 
