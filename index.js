@@ -8,20 +8,20 @@ import fs from 'fs';
 import generateMarkdown from "./utils/generateMarkdown.js";
 
 
-function badgeForLicense(license) {
+// Declaration of badgesArray for license details - this will be used for look up of url
+const badgesArray = {
+    'MIT': '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
+    'Apache 2.0': '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
+    'GPLv3': '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)',
+    'BSD 3-Clause': '[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)',
+    'ISC': '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
+    'Mozilla Public License 2.0': '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)',
+};
 
-    const badgesArray = {
-        'MIT': '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)',
-        'Apache 2.0': '[![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)',
-        'GPLv3': '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)',
-        'BSD 3-Clause': '[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)',
-        'ISC': '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)',
-        'Mozilla Public License 2.0': '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL%202.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)',
-    };
-    
-    // Lookup license in array, if found then return url otherwise return empty string
-    return badgesArray[license] || ''; 
-}
+
+// Extracting keys from badgesArray
+const licenseChoices = Object.keys(badgesArray);
+
 
 
 // Declare array of questions for user
@@ -65,14 +65,7 @@ const questions = () => {
             name: 'license',
             type: 'list',
             message: 'Select the License the Application is covered under?',
-            choices: [
-                "MIT",
-                "Apache 2.0",
-                "GPLv3",
-                "BSD 3-Clause",
-                "ISC",
-                "Mozilla Public License 2.0",
-            ],
+            choices: licenseChoices,
             default: 'MIT',
             validate: inputLicense => { return validateMandatoryDataInput(inputLicense, "License Type") }
         },
@@ -146,6 +139,14 @@ function writeToFile(fileName, data) {
 }
 
 
+
+// Lookup license in array, if found then return url otherwise return empty string
+function badgeForLicense(license) {
+    return badgesArray[license] || ''; 
+}
+
+
+
 // entry function that will be called first. See below call.
 function main() {
     questions()
@@ -155,7 +156,6 @@ function main() {
             writeToFile('test.md', markDownData);
         })
 }
-
 
 
 
