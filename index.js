@@ -1,7 +1,6 @@
 import inquirer from 'inquirer';
 import fs from 'fs';
-
-import generateMarkdown from "./utils/generateMarkdown";
+import generateMarkdown from "./utils/generateMarkdown.js";
 
 console.log("Hello");
 
@@ -138,6 +137,8 @@ function main() {
     questions()
     .then(answers => {
         console.log(answers.github_username);
+        let markDownData = generateMarkdown();
+        console.log(markDownData);
     })
 }
 
