@@ -139,12 +139,28 @@ const questions = () => {
 };
 
 
+// function to write README file
+function writeToFile(fileName, data) {
+
+    fs.writeFile(fileName, data, err => {
+    
+    // log any errors
+    if (err) { 
+        console.error(err);
+    } else {
+        console.log(`'${fileName}' has been created successfully`)
+    }
+    });
+}
+
+
 // function to initialize program
 function main() {
     questions()
     .then(answer => {
         let markDownData = generateMarkdown(answer);
-        console.log(markDownData);
+        console.log("Generating ..");
+        writeToFile('test.md', markDownData);
     })
 }
 
