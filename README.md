@@ -64,7 +64,8 @@ Link to my GitHub Repository: https://github.com/timsbootcamp/readme-generator
 
 Walkthrough code demonstrating the functionality of the application :
 
-Sample README.ms
+Sample README.md
+https://github.com/timsbootcamp/readme-generator/blob/main/assets/output/README.md
 
 
 
