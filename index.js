@@ -32,68 +32,39 @@ const questions = () => {
             // Prompt Title for input
             name: 'title',
             type: 'input',
-            message: 'What is your title of your project?',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log('FAILED VALIDATION!: title of your project is a mandatory field.');
-                    return false;
-                }
-            }
+            message: 'What is your Title of your Project?',
+            validate: inputTitle => { return validateMandatoryDataInput(inputTitle, "Title") }
         },
 
         // Prompt Description for input
         {
             name: 'description',
             type: 'input',
-            message: 'Provide a description of your project?',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log('FAILED VALIDATION!: description of your project is a mandatory field.');
-                    return false;
-                }
-            }
+            message: 'Provide a Description of your Project?',
+            validate: inputDescription => { return validateMandatoryDataInput(inputDescription, "Description") }
         },
 
         // Prompt Installation for input
         {
             name: 'installation',
             type: 'input',
-            message: 'Provide Installation Installations?',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                }
-                else {
-                    console.log('FAILED VALIDATION!: Installation Instructions is a mandatory field.');
-                    return false;
-                }
-            }
+            message: 'Provide Installation Instructions?',
+            validate: inputInstallation => { return validateMandatoryDataInput(inputInstallation, "Installation Instructions") }
         },
 
         // Prompt Usage for input
         {
             name: 'usage',
             type: 'input',
-            message: 'Could you describe the usefulness of the application?',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log('FAILED VALIDATION!: Usefulness of the application is a mandatory field.');
-                    return false;
-                }
-            }
+            message: 'Could you describe the Usefulness of the Application?',
+            validate: inputUsage => { return validateMandatoryDataInput(inputUsage, "Usefulness of the application") }
         },
 
         // Prompt License for input       
         {
             name: 'license',
             type: 'list',
-            message: 'Select the License the application is covered under?',
+            message: 'Select the License the Application is covered under?',
             choices: [
                 "MIT",
                 "Apache 2.0",
@@ -103,28 +74,21 @@ const questions = () => {
                 "Mozilla Public License 2.0",
             ],
             default: 'MIT',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log('FAILED VALIDATION!: License type is a mandatory field.');
-                    return false;
-                }
-            }
+            validate: inputLicense => { return validateMandatoryDataInput(inputLicense, "License Type") }
         },
 
         // Prompt Contributing for input       
         {
             name: 'contributing',
             type: 'input',
-            message: 'Provide a list of contributors for their input in the project?'
+            message: 'Provide a list of Contributors for their input in the project?'
         },
 
         // Prompt Dependencies for input       
         {
             name: 'dependencies',
             type: 'input',
-            message: 'What command should be run to install dependencies?',
+            message: 'What command should be run to install Dependencies?',
             default: 'npm i'
         },
 
@@ -132,7 +96,7 @@ const questions = () => {
         {
             name: 'tests',
             type: 'input',
-            message: 'What command should be run to run tests?',
+            message: 'What command should be run to run Tests?',
             default: 'npm test'
         },
 
@@ -141,33 +105,29 @@ const questions = () => {
             name: 'github_username',
             type: 'input',
             message: 'What is your GitHub Username?',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log('FAILED VALIDATION!: GitHub Username is a mandatory field.');
-                    return false;
-                }
-            }
+            validate: inputGitHubUserName => { return validateMandatoryDataInput(inputGitHubUserName, "GitHub Username") }
         },
 
         // Prompt Email Address for input       
         {
             name: 'email_address',
             type: 'input',
-            message: 'What is your email address?',
-            validate: nameInput => {
-                if (nameInput) {
-                    return true;
-                } else {
-                    console.log('FAILED VALIDATION!: Email Address is a mandatory field.');
-                    return false;
-                }
-            }
-
+            message: 'What is your Email Address?',
+            validate: inputEmailAddress => { return validateMandatoryDataInput(inputEmailAddress, "Email Address") }
         },
     ]);
 };
+
+
+function validateMandatoryDataInput(inputData, fieldName) {
+    if (inputData) {
+        return true;
+    } else {
+        console.log(`FAILED VALIDATION! - ${fieldName} is a mandatory field.`);
+        return false;
+    }
+}
+
 
 
 // function to write README file
