@@ -5,7 +5,7 @@ import inquirer from 'inquirer';
 import fs from 'fs';
 
 // imports a default export named generateMarkdown from the './utils/generateMarkdown.js' file.
-import generateMarkdown from './utils/generateMarkdown.js';
+import generateMarkdown from './assets/js/generateMarkdown.js';
 
 
 const outputFile = './assets/output/README.md';
@@ -52,6 +52,7 @@ const questions = () => {
             name: 'installation',
             type: 'input',
             message: 'Provide Installation Instructions?',
+            default: 'npm i',
             validate: inputInstallation => { return validateMandatoryDataInput(inputInstallation, "Installation Instructions") }
         },
 
@@ -78,14 +79,6 @@ const questions = () => {
             name: 'contributing',
             type: 'input',
             message: 'Provide a list of Contributors for their input in the project?'
-        },
-
-        // Prompt Dependencies for input       
-        {
-            name: 'dependencies',
-            type: 'input',
-            message: 'What command should be run to install Dependencies?',
-            default: 'npm i'
         },
 
         // Prompt Tests for input       
