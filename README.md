@@ -62,10 +62,14 @@ The source code can be cloned from the above link.
 
 Link to my GitHub Repository: https://github.com/timsbootcamp/readme-generator
 
+
 Walkthrough code demonstrating the functionality of the application :
+https://youtu.be/DFEf9A5abh4
+
 
 Sample README.md
 https://github.com/timsbootcamp/readme-generator/blob/main/assets/output/README.md
+
 
 
 
