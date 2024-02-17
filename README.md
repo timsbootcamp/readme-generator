@@ -9,7 +9,7 @@ My motivation was to accelerate my front end skills in web development so I can 
 >Why I built this project?
 
 Building the website helped me to bridge the gap between theoretical knowledge and practical of applying
-my Javascript, ES6 and Node.js knowledge that I learnt in Week 11.
+my Javascript, ES6 and Node.js knowledge that I learnt in Week 11 and also earlier parts of the course.
 
 
 > What problem did it solve?
@@ -19,14 +19,14 @@ It solved the problem of generating a README.md file based on a user's input.
 
 > What did I learn?
 
-I learnt how about features of ES6, installation of Node.js, using Inquirer and FS packages.
+I learnt how about ES6, installation of Node.js, using packages : Inquirer and FS.
 
 
 > What makes my project stand out? 
 
 It stands out as I have successfully completed the exercise, used good programming practice in terms of writing clean code. I have used appropriate constants and variables that are understandable. There are comments throughout the code so it can be understood by any developer.  
 
-I used Template Literals, arrow functions and made use of Destructuring. Also, I applied validation on mandatory
+I used Template Literals, Arrow Functions and made use of Destructuring. Also, I applied validation on mandatory
 fields so user has to some data in order to continue.
 
 I have pushed myself continually ensuring my work is of the highest quality. The code is readable and maintainable. 
@@ -52,7 +52,7 @@ I have pushed myself continually ensuring my work is of the highest quality. The
 
 ## Installation
 
-The GitHub repository for my Server Side API: Weather Dashboard can be found at: 
+The GitHub repository for my Readme Generator can be found at: 
 https://github.com/timsbootcamp/readme-generator
 
 The source code can be cloned from the above link. 
